@@ -440,10 +440,10 @@
         <code><span class="git">git</span> switch dev</code>
         <code class="comment"># 拉取 dev 分支最新代码</code>
         <code><span class="git">git</span> pull <span class="string">origin</span> dev</code>
-        <code class="comment"># 合并 main 分支到 dev</code>
-        <code><span class="git">git</span> merge main -m <span class="string">"同步 main 分支上线代码：v1.0.1 修复 yyy+新增 xxx"</span></code>
+        <code class="comment"># 合并 release/v1.0.1 分支到 dev（如果有修改）</code>
+        <code><span class="git">git</span> merge release/v1.0.1 -m <span class="string">"同步 release/v1.0.1 分支上线代码：v1.0.1 修复 yyy+新增 xxx"</span></code>
         <code class="comment"># 若有冲突，手动解决后提交</code>
-        <code class="comment"># git add . && git commit -m "合并 main 到 dev，解决xxx文件冲突"</code>
+        <code class="comment"># git add . && git commit -m "合并 release/v1.0.1 到 dev，解决xxx文件冲突"</code>
         <code class="comment"># 推送合并后的 dev 到远程</code>
         <code><span class="git">git</span> push <span class="string">origin</span> dev</code>
         <code class="comment"># 删除本地 release/v1.0.1 分支</code>
@@ -480,8 +480,8 @@
         <code><span class="git">git</span> switch dev</code>
         <code class="comment"># 拉取 dev 分支最新代码</code>
         <code><span class="git">git</span> pull <span class="string">origin</span> dev</code>
-        <code class="comment"># 合并 main 分支到 dev（也可以直接合并 hotfix/zzz 分支）→ 需要写明合并来源</code>
-        <code><span class="git">git</span> merge main -m <span class="string">"同步 main 分支的 hotfix：v1.0.2 修复线上 zzz 问题"</span></code>
+        <code class="comment"># 合并 hotfix/zzz 分支到 dev（如果有修改）</code>
+        <code><span class="git">git</span> merge hotfix/zzz -m <span class="string">"同步 hotfix/zzz 分支上线代码：v1.0.2 修复线上 zzz 问题"</span></code>
         <code class="comment"># 推送合并后的 dev 到远程</code>
         <code><span class="git">git</span> push <span class="string">origin</span> dev</code>
         <code class="comment"># 删除 hotfix/zzz 分支</code>
